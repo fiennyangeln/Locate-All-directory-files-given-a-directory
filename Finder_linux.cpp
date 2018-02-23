@@ -21,20 +21,21 @@ int main()
         cout<<"Enter directory name: ";
         cin>>strFolder;
         length = strFolder.size();
-        if(strFolder[length-1]=='/'){
+        if(strFolder[length-1]=='/')
+		{
             strFolder = strFolder.substr(0,length-1);
-            // cout<<"changed to: "<<strFolder<<" me\n" ;                  // debugging step
         }
         dir = opendir (strFolder.c_str());
-        // cout<<"dir: "<<dir<<" me\n";                                    // debugging step
-        // cout<<"dir: "<<dir<<endl;                                       // debugging step
+        // cout<<"dir: "<<dir<<endl;              // debugging step prints hexadecimal address if directory found otherwise 0
         isValidDir = (dir!=NULL) ? true:false;
-        if(!isValidDir){
+        if(!isValidDir)
+		{
             cout<<"Not a valid directory!\n";
         }
     }
     while(!isValidDir);
-    // string strFolder="/home/ankur/Desktop";
+	
+    // string strFolder="/home/ankur/Desktop";    // debugging step
     string strBase = strFolder,strFileName;
     qDir.push(strBase);
     while (qDir.empty()==false)

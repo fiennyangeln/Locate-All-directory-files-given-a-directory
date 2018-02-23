@@ -2,3 +2,6 @@
 
 I use dirent.h library to obtain all files & directories inside a directory. 
 Once seeing a directory, it will then explore that directory further later on
+
+- Finder.cpp is for Windows<br/>
+- Finder_linux.cpp is for Linux<br/>
